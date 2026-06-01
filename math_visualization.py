@@ -1,10 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# =====================================================
 # Task 1 - Mathematical Function Visualization
-# =====================================================
-
 x = np.linspace(-10, 10, 500)
 
 y1 = x
@@ -27,9 +24,7 @@ plt.grid(True)
 plt.savefig("function_plot.png")
 plt.close()
 
-# =====================================================
 # Task 2 - Own Equation
-# =====================================================
 
 # Mixed equation combining cubic, trigonometric, and exponential terms
 y_own = 0.03 * x**3 - 0.4 * x**2 + np.sin(x) + 2 * np.exp(-0.05 * x)
@@ -45,10 +40,7 @@ plt.grid(True)
 plt.savefig("own_equation.png")
 plt.close()
 
-# =====================================================
 # Task 3 - Student Score Visualization
-# =====================================================
-
 students = ["S1", "S2", "S3", "S4", "S5",
             "S6", "S7", "S8", "S9", "S10"]
 
@@ -60,7 +52,7 @@ final = np.array([80, 70, 94, 68, 75,
 
 total = 0.4 * midterm + 0.6 * final
 
-# A. Scatter Plot
+#Scatter Plot
 plt.figure(figsize=(8, 6))
 plt.scatter(midterm, final, color='blue')
 plt.title("Midterm vs Final Scores")
@@ -71,7 +63,7 @@ plt.grid(True)
 plt.savefig("score_scatter.png")
 plt.close()
 
-# B. Histogram
+#Histogram
 plt.figure(figsize=(8, 6))
 plt.hist(total, bins=5, color='green', edgecolor='black')
 plt.title("Distribution of Total Scores")
@@ -82,7 +74,7 @@ plt.grid(True)
 plt.savefig("score_histogram.png")
 plt.close()
 
-# C. Bar Chart
+#Bar Chart
 plt.figure(figsize=(10, 6))
 plt.bar(students, total, color='orange')
 
@@ -94,10 +86,7 @@ plt.grid(axis='y')
 plt.savefig("score_bar_chart.png")
 plt.close()
 
-# =====================================================
 # Task 4 - Best-Fit Line / Prediction
-# =====================================================
-
 slope, intercept = np.polyfit(midterm, final, 1)
 
 x_fit = np.linspace(min(midterm), max(midterm), 100)
